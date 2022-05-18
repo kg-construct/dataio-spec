@@ -202,7 +202,7 @@ The following example shows a Target of a
 WebSocket in N-Quads format without compression:
 
 <pre class="ex-target">
-&lt;#HTTPSSEStream&gt; a rml:LogicalTarget;
+&lt;#WebSocketStream&gt; a rml:LogicalTarget;
      rml:target [ a td:Thing;
        td:hasPropertyAffordance [
          td:hasForm [
