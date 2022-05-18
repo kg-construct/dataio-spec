@@ -329,8 +329,8 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
       "key": "This Version",
       "data": [
         {
-          "value": "https://rml.io/specs/dataio/20220517/",
-          "href": "https://rml.io/specs/dataio/20220517/"
+          "value": "https://rml.io/specs/dataio/20220518/",
+          "href": "https://rml.io/specs/dataio/20220518/"
         }
       ]
     },
@@ -385,7 +385,7 @@ var[data-type]:hover::after,var[data-type]:hover::before{opacity:1}
         
         
         <dt>This Version</dt><dd>
-    <a href="https://rml.io/specs/dataio/20220517/">https://rml.io/specs/dataio/20220517/</a>
+    <a href="https://rml.io/specs/dataio/20220518/">https://rml.io/specs/dataio/20220518/</a>
   </dd><dt>Previous Version</dt><dd>
     <a href="https://rml.io/specs/dataio/20220517/">https://rml.io/specs/dataio/20220517/</a>
   </dd><dt>Website</dt><dd>
@@ -426,7 +426,7 @@ through definitions and examples.</p>
     <p data-format="markdown"><p>This is an early draft,
 yet efforts are made to keep things stable.</p>
 </p>
-</section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">1. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#overview"><bdi class="secno">2. </bdi>Overview</a></li><li class="tocline"><a class="tocxref" href="#source-vocabulary"><bdi class="secno">3. </bdi>Logical Source vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#defining-logical-sources"><bdi class="secno">3.1 </bdi>Defining Logical Sources</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#reference-formulations"><bdi class="secno">3.1.1 </bdi>Reference formulations</a></li></ol></li><li class="tocline"><a class="tocxref" href="#source"><bdi class="secno">3.2 </bdi>Source</a></li><li class="tocline"><a class="tocxref" href="#examples"><bdi class="secno">3.3 </bdi>Examples</a></li></ol></li><li class="tocline"><a class="tocxref" href="#target-vocabulary"><bdi class="secno">4. </bdi>Target vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#defining-targets"><bdi class="secno">4.1 </bdi>Defining Targets</a></li><li class="tocline"><a class="tocxref" href="#examples"><bdi class="secno">4.2 </bdi>Examples</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">A.1 </bdi>Normative references</a></li></ol></li></ol></nav>
+</section><nav id="toc"><h2 class="introductory" id="table-of-contents">Table of Contents</h2><ol class="toc"><li class="tocline"><a class="tocxref" href="#abstract">Abstract</a></li><li class="tocline"><a class="tocxref" href="#sotd">Status of This Document</a></li><li class="tocline"><a class="tocxref" href="#conformance"><bdi class="secno">1. </bdi>Conformance</a></li><li class="tocline"><a class="tocxref" href="#overview"><bdi class="secno">2. </bdi>Overview</a></li><li class="tocline"><a class="tocxref" href="#source-vocabulary"><bdi class="secno">3. </bdi>Logical Source vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#defining-logical-sources"><bdi class="secno">3.1 </bdi>Defining Logical Sources</a></li><li class="tocline"><a class="tocxref" href="#reference-formulations"><bdi class="secno">3.2 </bdi>Reference formulations</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#sql-databases"><bdi class="secno">3.2.1 </bdi>SQL databases</a></li><li class="tocline"><a class="tocxref" href="#tabular-csv-tsv-data"><bdi class="secno">3.2.2 </bdi>Tabular CSV &amp; TSV data</a></li><li class="tocline"><a class="tocxref" href="#json-data"><bdi class="secno">3.2.3 </bdi>JSON data</a></li><li class="tocline"><a class="tocxref" href="#xml-data"><bdi class="secno">3.2.4 </bdi>XML data</a></li></ol></li><li class="tocline"><a class="tocxref" href="#source"><bdi class="secno">3.3 </bdi>Source</a></li><li class="tocline"><a class="tocxref" href="#examples"><bdi class="secno">3.4 </bdi>Examples</a></li></ol></li><li class="tocline"><a class="tocxref" href="#target-vocabulary"><bdi class="secno">4. </bdi>Target vocabulary</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#defining-targets"><bdi class="secno">4.1 </bdi>Defining Targets</a></li><li class="tocline"><a class="tocxref" href="#examples"><bdi class="secno">4.2 </bdi>Examples</a></li></ol></li><li class="tocline"><a class="tocxref" href="#references"><bdi class="secno">A. </bdi>References</a><ol class="toc"><li class="tocline"><a class="tocxref" href="#normative-references"><bdi class="secno">A.1 </bdi>Normative references</a></li></ol></li></ol></nav>
 
 <section id="conformance"><div class="header-wrapper"><h2 id="x1-conformance"><bdi class="secno">1. </bdi>Conformance</h2><a class="self-link" href="#conformance" aria-label="Permalink for Section 1."></a></div><p>As well as sections marked as non-normative, all authoring guidelines, diagrams, examples, and notes in this specification are non-normative. Everything else in this specification is normative.</p><p>
         The key words <em class="rfc2119">MAY</em>, <em class="rfc2119">MUST</em>, and <em class="rfc2119">MUST NOT</em> in this document
@@ -576,7 +576,7 @@ If a property is specified, it <em class="rfc2119">MUST NOT</em> be specified mu
   <figcaption>Figure <bdi class="figno">1</bdi> <span class="fig-title">The structure of Source</span></figcaption>
 </figure>
 
-<section id="reference-formulations"><div class="header-wrapper"><h4 id="x3-1-1-reference-formulations"><bdi class="secno">3.1.1 </bdi>Reference formulations</h4><a class="self-link" href="#reference-formulations" aria-label="Permalink for Section 3.1.1"></a></div>
+</section><section id="reference-formulations"><div class="header-wrapper"><h3 id="x3-2-reference-formulations"><bdi class="secno">3.2 </bdi>Reference formulations</h3><a class="self-link" href="#reference-formulations" aria-label="Permalink for Section 3.2"></a></div>
 <p>Each Logical Source has a reference formulation to define how to reference
 to elements of the data of the input source.
 Several reference formulations (<code>rml:ReferenceFormulation</code>)
@@ -598,7 +598,8 @@ A <code>ql:Namespace</code> contains the following required properties:</p>
 <li><code>ql:namespacePrefix</code>: A Literal with the prefix used for the XML namespace.</li>
 <li><code>ql:namespaceURL</code>: A Literal with the URL identifying the XML namespace.</li>
 </ul>
-<pre class="ex-source" aria-busy="false"><code class="hljs">&lt;#XMLNamespace&gt; a rml:LogicalSource;
+<pre class="ex-source" aria-busy="false"><code class="hljs">@prefix dcat : &lt;http://www.w3.org/ns/dcat#&gt; .
+&lt;#XMLNamespace&gt; a rml:LogicalSource;
      rml:source [ a rml:Source
        rml:access [ a dcat:Dataset;
          dcat:distribution [ a dcat:Distribution;
@@ -615,7 +616,95 @@ A <code>ql:Namespace</code> contains the following required properties:</p>
      rml:iterator "/xpath/ex:namespace/expression";
 .</code></pre>
 
-</section></section><section id="source"><div class="header-wrapper"><h3 id="x3-2-source"><bdi class="secno">3.2 </bdi>Source</h3><a class="self-link" href="#source" aria-label="Permalink for Section 3.2"></a></div>
+<section id="sql-databases"><div class="header-wrapper"><h4 id="x3-2-1-sql-databases"><bdi class="secno">3.2.1 </bdi>SQL databases</h4><a class="self-link" href="#sql-databases" aria-label="Permalink for Section 3.2.1"></a></div>
+<p>SQL databases require a SQL query to be performed to retrieve a table or view
+from the database. This is specified through the <code>rr:SQL2008</code> 
+reference formulation from the W3C R2RML recommendation.</p>
+<pre class="ex-source" aria-busy="false"><code class="hljs">@prefix d2rq : &lt;http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#&gt; .
+&lt;#SQLDatabase&gt; a rml:LogicalSource;
+     rml:source [ a rml:Source
+       rml:access [ a d2rq:Database;
+          d2rq:jdbcDSN "jdbc:mysql://localhost/example";
+          d2rq:jdbcDriver "com.mysql.jdbc.Driver";
+          d2rq:username "user";
+          d2rq:password "password" .
+       ];
+     ];
+     rml:referenceFormulation rr:SQL2008;
+     rml:query "SELECT name FROM student;"
+.</code></pre>
+
+</section><section id="tabular-csv-tsv-data"><div class="header-wrapper"><h4 id="x3-2-2-tabular-csv-tsv-data"><bdi class="secno">3.2.2 </bdi>Tabular CSV &amp; TSV data</h4><a class="self-link" href="#tabular-csv-tsv-data" aria-label="Permalink for Section 3.2.2"></a></div>
+<p>Tabular data are widely used and described by existing standards such as 
+W3C CSVW recommendation. Refering to these data can be done by referring 
+to column names through the <code>ql:CSV</code> reference formulation.</p>
+<p>In the following example, a CSV file is accessed,
+but the CSV reference formulation is not limited to files.
+Other type of data sources in a CSV format can use the same
+reference formulation.</p>
+<pre class="ex-source" aria-busy="false"><code class="hljs">@prefix csvw : &lt;http://www.w3.org/ns/csvw#&gt; .
+&lt;#CSVFile&gt; a rml:LogicalSource;
+     rml:source [ a rml:Source
+       rml:access [ a d2rq:Database;
+         csvw:url "file:///data/file.csv" ;
+         csvw:dialect [ a csvw:Dialect;
+           csvw:delimiter ";";
+           csvw:encoding "UTF-8";
+           csvw:header "1"^^xsd:boolean;
+         ];
+       ];
+     ];
+     rml:referenceFormulation ql:CSV;
+.</code></pre>
+
+</section><section id="json-data"><div class="header-wrapper"><h4 id="x3-2-3-json-data"><bdi class="secno">3.2.3 </bdi>JSON data</h4><a class="self-link" href="#json-data" aria-label="Permalink for Section 3.2.3"></a></div>
+<p>JSON data is hierarchical and can be refered to using JSONPath
+which is specified through the <code>ql:JSONPath</code> reference formulation.</p>
+<p>In the following example, a JSON file is accessed,
+but the JSONpath reference formulation is not limited to files.
+Other type of data sources in a JSON format can use the same
+reference formulation.</p>
+<pre class="ex-source" aria-busy="false"><code class="hljs">@prefix dcat : &lt;http://www.w3.org/ns/dcat#&gt; .
+&lt;#JSONFile&gt; a rml:LogicalSource;
+     rml:source [ a rml:Source
+       rml:access [ a dcat:Dataset;
+         dcat:distribution [ a dcat:Distribution;
+           dcat:downloadURL "http://example.org/file.xml";
+         ];
+       ];  
+     ];
+     rml:referenceFormulation ql:JSONPath;
+.</code></pre>
+
+</section><section id="xml-data"><div class="header-wrapper"><h4 id="x3-2-4-xml-data"><bdi class="secno">3.2.4 </bdi>XML data</h4><a class="self-link" href="#xml-data" aria-label="Permalink for Section 3.2.4"></a></div>
+<p>XML data is hierarchical and can be refered to using XPath
+which is specified through the <code>ql:XPath</code> reference formulation.
+If an XML namespace needs to be specified,
+<code>ql:XpathReferenceFormulation</code> class can be used which allows
+to define one or multiple XML namespaces.</p>
+<p>In the following example, a JSON file is accessed,
+but the CSV reference formulation is not limited to files.
+Other type of data sources in a CSV format can use the same
+reference formulation.</p>
+<pre class="ex-source" aria-busy="false"><code class="hljs">@prefix dcat : &lt;http://www.w3.org/ns/dcat#&gt; .
+&lt;#XMLNamespace&gt; a rml:LogicalSource;
+     rml:source [ a rml:Source
+       rml:access [ a dcat:Dataset;
+         dcat:distribution [ a dcat:Distribution;
+           dcat:accessURL &lt;file:///path/to/data.xml&gt;;
+         ];
+       ];
+     ];
+     rml:referenceFormulation [ a ql:XPathReferenceFormulation;
+       ql:namespace [ a ql:Namespace;
+         ql:namespacePrefix "ex";
+         ql:namespaceURL "http://example.org";
+       ];
+     ];
+     rml:iterator "/xpath/ex:namespace/expression";
+.</code></pre>
+
+</section></section><section id="source"><div class="header-wrapper"><h3 id="x3-3-source"><bdi class="secno">3.3 </bdi>Source</h3><a class="self-link" href="#source" aria-label="Permalink for Section 3.3"></a></div>
 <p>A Source (<code>rml:Source</code>) defines how a data source should be accessed.
 It <em class="rfc2119">MUST</em> contain the follow properties:</p>
 <ul>
@@ -685,7 +774,7 @@ and the used compression algorithm. Defaults to no compression.</li>
 <td><code>comp:Compression</code></td>
 </tr>
 </tbody></table>
-</section><section id="examples-0"><div class="header-wrapper"><h3 id="examples"><bdi class="secno">3.3 </bdi>Examples</h3><a class="self-link" href="#examples" aria-label="Permalink for Section 3.3"></a></div><p>The following example show a Source of an CSV file.</p>
+</section><section id="examples-0"><div class="header-wrapper"><h3 id="examples"><bdi class="secno">3.4 </bdi>Examples</h3><a class="self-link" href="#examples" aria-label="Permalink for Section 3.4"></a></div><p>The following example show a Source of an CSV file.</p>
 <pre class="ex-source" aria-busy="false"><code class="hljs">&lt;#CSV&gt; a rml:LogicalSource;
      rml:source [ a csvw:Table;
          csvw:url "/path/to/data.csv";
@@ -918,7 +1007,7 @@ HTTP Server Sent Events stream in N-Quads format without compression:</p>
 
 <p>The following example shows a Target of a
 WebSocket in N-Quads format without compression:</p>
-<pre class="ex-target" aria-busy="false"><code class="hljs">&lt;#HTTPSSEStream&gt; a rml:LogicalTarget;
+<pre class="ex-target" aria-busy="false"><code class="hljs">&lt;#WebSocketStream&gt; a rml:LogicalTarget;
      rml:target [ a td:Thing;
        td:hasPropertyAffordance [
          td:hasForm [
