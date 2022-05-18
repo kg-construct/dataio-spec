@@ -56,7 +56,7 @@ If a property is specified, it MUST NOT be specified multiple times.
   <figcaption>The structure of Source</figcaption>
 </figure>
 
-#### Reference formulations
+### Reference formulations
 
 Each Logical Source has a reference formulation to define how to reference
 to elements of the data of the input source.
@@ -79,6 +79,114 @@ A `ql:Namespace` contains the following required properties:
  - `ql:namespaceURL`: A Literal with the URL identifying the XML namespace.
 
 <pre class="ex-source">
+@prefix dcat : &lt;http://www.w3.org/ns/dcat#&gt; .
+&lt;#XMLNamespace&gt; a rml:LogicalSource;
+     rml:source [ a rml:Source
+       rml:access [ a dcat:Dataset;
+         dcat:distribution [ a dcat:Distribution;
+           dcat:accessURL &lt;file:///path/to/data.xml&gt;;
+         ];
+       ];
+     ];
+     rml:referenceFormulation [ a ql:XPathReferenceFormulation;
+       ql:namespace [ a ql:Namespace;
+         ql:namespacePrefix "ex";
+         ql:namespaceURL "http://example.org";
+       ];
+     ];
+     rml:iterator "/xpath/ex:namespace/expression";
+.
+</pre>
+
+#### SQL databases
+
+SQL databases require a SQL query to be performed to retrieve a table or view
+from the database. This is specified through the `rr:SQL2008` 
+reference formulation from the W3C R2RML recommendation.
+
+<pre class="ex-source">
+@prefix d2rq : &lt;http://www.wiwiss.fu-berlin.de/suhl/bizer/D2RQ/0.1#&gt; .
+&lt;#SQLDatabase&gt; a rml:LogicalSource;
+     rml:source [ a rml:Source
+       rml:access [ a d2rq:Database;
+          d2rq:jdbcDSN "jdbc:mysql://localhost/example";
+          d2rq:jdbcDriver "com.mysql.jdbc.Driver";
+          d2rq:username "user";
+          d2rq:password "password" .
+       ];
+     ];
+     rml:referenceFormulation rr:SQL2008;
+     rml:query "SELECT name FROM student;"
+.
+</pre>
+
+#### Tabular CSV & TSV data
+
+Tabular data are widely used and described by existing standards such as 
+W3C CSVW recommendation. Refering to these data can be done by referring 
+to column names through the `ql:CSV` reference formulation.
+
+In the following example, a CSV file is accessed,
+but the CSV reference formulation is not limited to files.
+Other type of data sources in a CSV format can use the same
+reference formulation.
+
+<pre class="ex-source">
+@prefix csvw : &lt;http://www.w3.org/ns/csvw#&gt; .
+&lt;#CSVFile&gt; a rml:LogicalSource;
+     rml:source [ a rml:Source
+       rml:access [ a d2rq:Database;
+         csvw:url "file:///data/file.csv" ;
+         csvw:dialect [ a csvw:Dialect;
+           csvw:delimiter ";";
+           csvw:encoding "UTF-8";
+           csvw:header "1"^^xsd:boolean;
+         ];
+       ];
+     ];
+     rml:referenceFormulation ql:CSV;
+.
+</pre>
+
+#### JSON data
+
+JSON data is hierarchical and can be refered to using JSONPath
+which is specified through the `ql:JSONPath` reference formulation.
+
+In the following example, a JSON file is accessed,
+but the JSONpath reference formulation is not limited to files.
+Other type of data sources in a JSON format can use the same
+reference formulation.
+
+<pre class="ex-source">
+@prefix dcat : &lt;http://www.w3.org/ns/dcat#&gt; .
+&lt;#JSONFile&gt; a rml:LogicalSource;
+     rml:source [ a rml:Source
+       rml:access [ a dcat:Dataset;
+         dcat:distribution [ a dcat:Distribution;
+           dcat:downloadURL "http://example.org/file.xml";
+         ];
+       ];  
+     ];
+     rml:referenceFormulation ql:JSONPath;
+.
+</pre>
+
+#### XML data
+
+XML data is hierarchical and can be refered to using XPath
+which is specified through the `ql:XPath` reference formulation.
+If an XML namespace needs to be specified,
+`ql:XpathReferenceFormulation` class can be used which allows
+to define one or multiple XML namespaces.
+
+In the following example, a JSON file is accessed,
+but the CSV reference formulation is not limited to files.
+Other type of data sources in a CSV format can use the same
+reference formulation.
+
+<pre class="ex-source">
+@prefix dcat : &lt;http://www.w3.org/ns/dcat#&gt; .
 &lt;#XMLNamespace&gt; a rml:LogicalSource;
      rml:source [ a rml:Source
        rml:access [ a dcat:Dataset;
